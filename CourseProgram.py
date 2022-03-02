@@ -18,6 +18,31 @@ def main():
     status = 'open'
     students = ['John','James','Jill','Jack','Joanne']
 
+import CourseClass as CC
+
+course = CC.course(name,crn,seats,status)
+
+reg0 = CC.Register(students[0], crn)
+reg1 = CC.Register(students[1], crn)
+reg2 = CC.Register(students[2], crn)
+reg3 = CC.Register(students[3], crn)
+reg4 = CC.Register(students[4], crn)
+
+StuRegistration = [reg0, reg1, reg2, reg3, reg4]
+
+count =+ 0 
+
+for i in StuRegistration:
+        if course.get_seats() > 0:
+            course.update_seat_count()
+            print("Name: ", student.get_name())
+            print("Course: ", course.get_name())
+            print("CRN: ", course.get_crn())
+            print("Seats Left: ", course.get_seats())
+            print()
+            print()
+        else:
+           print("Sorry Joanne, registration is closed for MIS 4322 - Advanced Python")
     
 main()
 
